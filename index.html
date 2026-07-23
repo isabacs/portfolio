@@ -22,7 +22,7 @@
 /* 1. CONTATO. Deixe "" no que não quiser mostrar. */
 const CONTATO = {
   email:     "",
-  whatsapp:  "",              /* só números, ex: "5511999998888" */
+  whatsapp:  "5511963918766",              /* só números, ex: "5511999998888" */
   linkedin:  "",
   instagram: ""
 };
@@ -332,8 +332,8 @@ dialog::backdrop{background:rgba(8,9,10,.92);backdrop-filter:blur(6px)}
     </div>
     <ul class="linha">
       <li><time>2026</time><div><h4>Grupo Ether</h4><p>Head de Edição. Lidero o time de editores em ciclo semanal, com padrão de entrega, nomenclatura e volume para campanhas de resposta direta no mercado americano.</p></div></li>
-      <li><time>2026</time><div><h4>Company GK</h4><p>Entrei como editora de vídeo e no primeiro mês fui promovida a Head de Edição, assumindo as calls e as frentes de gestão do setor.</p></div></li>
-      <li><time>2021/25</time><div><h4>Nitro Company</h4><p>Editora de vídeo e depois Head de Edição. Produção e pós de VSL e criativos, do bruto à entrega final.</p></div></li>
+      <li><time>2025</time><div><h4>Company GK</h4><p>Entrei como editora de vídeo e no primeiro mês fui promovida a Head de Edição, assumindo as calls e as frentes de gestão do setor.</p></div></li>
+      <li><time>2025</time><div><h4>Nitro Company</h4><p>Editora de vídeo e depois Head de Edição. Produção e pós de VSL e criativos, do bruto à entrega final.</p></div></li>
     </ul>
   </div>
 </section>
@@ -450,14 +450,22 @@ document.getElementById('acoes').innerHTML=acoes();
 document.getElementById('acoes2').innerHTML=acoes();
 
 /* formulário via mailto */
-document.getElementById('envioBox').innerHTML = CONTATO.email
-  ? `<button class="btn solid" id="enviar">Enviar mensagem</button>`
-  : `<div class="aviso">Preencha o email em CONTATO, no topo do código, para ativar o envio</div>`;
-if(CONTATO.email){
-  document.getElementById('enviar').addEventListener('click',()=>{
-    const g=id=>document.getElementById(id).value.trim();
-    const corpo=`Nome: ${g('fNome')}\nEmail: ${g('fEmail')}\n\n${g('fMsg')}`;
-    location.href='mailto:'+CONTATO.email+'?subject='+encodeURIComponent(g('fAssunto')||'Contato pelo portfólio')+'&body='+encodeURIComponent(corpo);
+var _via = CONTATO.whatsapp ? 'whatsapp' : (CONTATO.email ? 'email' : '');
+document.getElementById('envioBox').innerHTML = _via
+  ? '<button class="btn solid" id="enviar">' + (_via === 'whatsapp' ? 'Enviar pelo WhatsApp' : 'Enviar mensagem') + '</button>'
+  : '<div class="aviso">Preencha CONTATO no topo do código para ativar o envio</div>';
+if(_via){
+  document.getElementById('enviar').addEventListener('click', function(){
+    var g = function(id){ return document.getElementById(id).value.trim(); };
+    var assunto = g('fAssunto') || 'Contato pelo portfólio';
+    var N = String.fromCharCode(10);
+    if(_via === 'whatsapp'){
+      var txt = 'Oi Isabela, vim pelo seu portfólio.' + N + N + 'Nome: ' + g('fNome') + N + 'Assunto: ' + assunto + N + N + g('fMsg');
+      window.open('https://wa.me/' + CONTATO.whatsapp.replace(/\D/g,'') + '?text=' + encodeURIComponent(txt), '_blank');
+    } else {
+      var corpo = 'Nome: ' + g('fNome') + N + 'Email: ' + g('fEmail') + N + N + g('fMsg');
+      location.href = 'mailto:' + CONTATO.email + '?subject=' + encodeURIComponent(assunto) + '&body=' + encodeURIComponent(corpo);
+    }
   });
 }
 

@@ -15,7 +15,7 @@
 <script>
 /* ═══════════════════════════════════════════════════════════
    PAINEL DE CONTROLE
-   Ajuste seus dados aqui em cima.
+   Tudo que você precisa editar está entre aqui e o fim deste
    bloco. Não precisa mexer em mais nada no arquivo.
    ═══════════════════════════════════════════════════════════ */
 
@@ -31,7 +31,13 @@ const CONTATO = {
    final do código. Não existe imagem solta para perder. Para
    trocar depois, é só me pedir. */
 
-
+/* 3. NÚMEROS do topo. */
+const NUMEROS = [
+  { valor: 30, rotulo: "peças no portfólio" },
+  { valor: 5,  rotulo: "anos editando vídeo" },
+  { valor: 9,  rotulo: "nichos de resposta direta" },
+  { valor: 7,  rotulo: "editores sob minha gestão" }
+];
 
 /* 4. VÍDEO DE ABERTURA. */
 const REEL = { id: "1-uZgu2JATkmulx1R-gmlMOiJjH0_ZfwU", titulo: "Conheça meu trabalho" };
@@ -376,7 +382,7 @@ const slug=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').re
 
 document.getElementById('reelImg').src=capa(REEL.id);
 document.getElementById('rodape').textContent=(VIDEOS.length+1)+' peças no portfólio';
-document.getElementById('nichos').innerHTML=NICHOS.map(n=>`<li>${n}</li>`).join('');
+(document.getElementById('nichos')||{}).innerHTML=NICHOS.map(n=>`<li>${n}</li>`).join('');
 
 /* botões de contato */
 function acoes(){
@@ -412,7 +418,7 @@ if(_via){
 }
 
 /* números */
-document.getElementById('numeros').innerHTML=NUMEROS.map(n=>`<div class="num reveal"><b data-alvo="${n.valor}">0</b><span>${n.rotulo}</span></div>`).join('');
+(document.getElementById('numeros')||{}).innerHTML=NUMEROS.map(n=>`<div class="num reveal"><b data-alvo="${n.valor}">0</b><span>${n.rotulo}</span></div>`).join('');
 function contar(el){
   const alvo=+el.dataset.alvo, ini=performance.now(), dur=1100;
   (function passo(t){

@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Isabela Barreto | Editora de vídeo e VSL há 5 anoos.</title>
-<meta name="description" content="Editora de vídeo especializada em VSLs e criativos para o mercado americano.">
-<meta property="og:title" content="Isabela Barreto | Editora de vídeo">
+<title>Isabela Barreto | Head de Edição, VSL e criativos de resposta direta</title>
+<meta name="description" content="Head de Edição. VSLs e criativos de resposta direta para o mercado americano. 30 peças no portfólio.">
+<meta property="og:title" content="Isabela Barreto | Head de Edição">
 <meta property="og:description" content="VSLs e criativos de resposta direta para o mercado americano.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
 /* 1. CONTATO. Deixe "" no que não quiser mostrar. */
 const CONTATO = {
   email:     "",
-  whatsapp:  "",              /* só números, ex: "5511999998888" */
+  whatsapp:  "5511963918766",              /* só números, ex: "5511999998888" */
   linkedin:  "",
   instagram: ""
 };
@@ -34,7 +34,9 @@ const CONTATO = {
 /* 3. NÚMEROS do topo. */
 const NUMEROS = [
   { valor: 30, rotulo: "peças no portfólio" },
-  { valor: 5,  rotulo: "anos editando vídeo" }
+  { valor: 5,  rotulo: "anos editando vídeo" },
+  { valor: 9,  rotulo: "nichos de resposta direta" },
+  { valor: 7,  rotulo: "editores sob minha gestão" }
 ];
 
 /* 4. VÍDEO DE ABERTURA. */
@@ -119,6 +121,8 @@ h2{font-family:var(--display);font-weight:800;font-size:clamp(30px,4.4vw,58px);l
 .bar nav{display:flex;gap:22px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 .bar nav a{color:var(--muted);text-decoration:none;transition:color .2s}
 .bar nav a:hover{color:var(--amber)}
+.lang{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--muted);text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:5px 12px;transition:.2s}
+.lang:hover{border-color:var(--amber);color:var(--amber)}
 .tc{font-family:var(--mono);font-size:12px;color:var(--amber);letter-spacing:.05em;font-variant-numeric:tabular-nums}
 @media(max-width:900px){.bar nav{display:none}}
 
@@ -255,6 +259,7 @@ dialog::backdrop{background:rgba(8,9,10,.92);backdrop-filter:blur(6px)}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .reveal.on{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+.wa-fab{position:fixed;right:18px;bottom:18px;z-index:85;display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border-radius:999px;background:var(--amber);color:#0F1113;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;text-decoration:none;box-shadow:0 14px 30px -12px rgba(0,0,0,.7);transition:transform .2s}.wa-fab:hover{transform:translateY(-2px)}.wa-fab svg{width:17px;height:17px;fill:#0F1113}
 </style>
 </head>
 <body>
@@ -270,14 +275,16 @@ dialog::backdrop{background:rgba(8,9,10,.92);backdrop-filter:blur(6px)}
     <a href="#faq">Dúvidas</a>
     <a href="#contato">Contato</a>
   </nav>
+  <a class="lang" href="en/">EN</a>
   <div class="tc" id="tc">00:00:00:00</div>
 </header>
 
 <section class="hero">
   <div>
+    <span class="livre"><i></i> Disponível para projetos</span>
     <h1>Prazer, <em>Isabela Barreto</em></h1>
-    <p class="papel">Editora de vídeo · VSL e criativos</p>
-    <p class="lede">Faço <strong>VSLs e criativos para o mercado americano</strong> Vim do financeiro, então leio criativo do mesmo jeito que lia planilha: olhando gancho, retenção e o que move o número.</p>
+    <p class="papel">Head de Edição · VSL e criativos de resposta direta</p>
+    <p class="lede">Faço <strong>VSLs e criativos para o mercado americano</strong> e lidero um time de edição em ciclo semanal. Vim do financeiro, então leio criativo do mesmo jeito que lia planilha: gancho, retenção e o que move o número.</p>
     <div class="acoes" id="acoes"></div>
   </div>
   <div class="retrato">
@@ -315,6 +322,26 @@ dialog::backdrop{background:rgba(8,9,10,.92);backdrop-filter:blur(6px)}
 
 <div id="pastas"></div>
 
+<section id="trajetoria">
+  <div class="eyebrow">Trajetória</div>
+  <div class="split">
+    <div>
+      <h2 style="margin-bottom:26px">Da planilha para a timeline</h2>
+      <div class="wide-img"><img alt="Isabela Barreto em ambiente corporativo" id="fotoSobre"></div>
+      <div class="prose">
+        <p>Comecei no financeiro e migrei para o vídeo. Isso mudou o jeito como eu edito.</p>
+        <p>Passei anos olhando número antes de olhar um corte. É isso que me separa de quem só deixa bonito. Corte que não vende é corte desperdiçado.</p>
+        <p>Sou formada em Gestão de RH, curso Publicidade e Propaganda e sou Adobe Certified Professional em Premiere Pro. Tenho inglês avançado, porque o que eu entrego vai ao ar nos Estados Unidos.</p>
+      </div>
+    </div>
+    <ul class="linha">
+      <li><time>2026</time><div><h4>Grupo Ether</h4><p>Head de Edição. Lidero o time de edição em ciclo semanal, cuidando do padrão de entrega, da nomenclatura e do volume para campanhas de resposta direta que rodam nos EUA.</p></div></li>
+      <li><time>2025</time><div><h4>Company GK</h4><p>Entrei como editora de vídeo e fui promovida a Head de Edição no primeiro mês, assumindo as calls e a gestão do departamento.</p></div></li>
+      <li><time>2025</time><div><h4>Nitro Company</h4><p>Editora de vídeo e depois Head de Edição. Produção e pós de VSLs e criativos, do material bruto à entrega final.</p></div></li>
+    </ul>
+  </div>
+</section>
+
 <section id="processo">
   <div class="eyebrow">Processo</div>
   <div class="split">
@@ -345,7 +372,7 @@ dialog::backdrop{background:rgba(8,9,10,.92);backdrop-filter:blur(6px)}
     <details><summary>Você trabalha com material em inglês?</summary><p>Sim. Edito peças em inglês para o mercado americano e faço a ponte entre o roteiro em português e a versão final que vai ao ar.</p></details>
     <details><summary>Como funciona o seu processo?</summary><p>Leitura do roteiro e do ângulo, seleção de material, montagem do gancho primeiro e só depois corpo e oferta. A entrega sai em variações para teste, não em peça única.</p></details>
     <details><summary>Você usa Inteligência Artificial?</summary><p>Uso, dentro da linha de produção. Geração de imagem, voz e vídeo entram para ganhar velocidade e volume, sem abrir mão da direção criativa.</p></details>
-    <details><summary>Você consegue entregar em volume?</summary><p>Consigo. Trabalho com ciclo de produção definido, padrão de entrega e nomenclatura organizados, o que permite escalar variações de teste sem perder controle de qualidade.</p></details>
+    <details><summary>Você consegue entregar em volume?</summary><p>Consigo. Hoje coordeno um time de editores em ciclo semanal, com padrão de entrega e nomenclatura definidos. É isso que permite escalar variações de teste sem perder o controle de qualidade.</p></details>
     <details><summary>Qual o prazo de entrega?</summary><p>Depende do formato. Criativo curto sai rápido, VSL completa pede mais tempo de montagem e ajuste. Combino o cronograma antes de começar, com data de cada etapa.</p></details>
   </div>
 </section>
@@ -369,10 +396,11 @@ dialog::backdrop{background:rgba(8,9,10,.92);backdrop-filter:blur(6px)}
 </section>
 
 <footer>
-<span>Isabela Barreto, Editora de vídeo</span>
+  <span>Isabela Barreto, Head de Edição</span>
   <span id="rodape"></span>
 </footer>
 
+<a class="wa-fab" href="https://wa.me/5511963918766?text=Oi%2C%20Isabela%21%20Vim%20pelo%20seu%20portf%C3%B3lio." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg>WhatsApp</a>
 <dialog id="modal">
   <div class="player">
     <div class="top">
@@ -427,14 +455,22 @@ document.getElementById('acoes').innerHTML=acoes();
 document.getElementById('acoes2').innerHTML=acoes();
 
 /* formulário via mailto */
-document.getElementById('envioBox').innerHTML = CONTATO.email
-  ? `<button class="btn solid" id="enviar">Enviar mensagem</button>`
-  : `<div class="aviso">Preencha o email em CONTATO, no topo do código, para ativar o envio</div>`;
-if(CONTATO.email){
-  document.getElementById('enviar').addEventListener('click',()=>{
-    const g=id=>document.getElementById(id).value.trim();
-    const corpo=`Nome: ${g('fNome')}\nEmail: ${g('fEmail')}\n\n${g('fMsg')}`;
-    location.href='mailto:'+CONTATO.email+'?subject='+encodeURIComponent(g('fAssunto')||'Contato pelo portfólio')+'&body='+encodeURIComponent(corpo);
+var _via = CONTATO.whatsapp ? 'whatsapp' : (CONTATO.email ? 'email' : '');
+document.getElementById('envioBox').innerHTML = _via
+  ? '<button class="btn solid" id="enviar">' + (_via === 'whatsapp' ? 'Enviar pelo WhatsApp' : 'Enviar mensagem') + '</button>'
+  : '<div class="aviso">Preencha o CONTATO no topo do código para ativar o envio</div>';
+if(_via){
+  document.getElementById('enviar').addEventListener('click', function(){
+    var g = function(id){ return document.getElementById(id).value.trim(); };
+    var assunto = g('fAssunto') || 'Contato pelo portfólio';
+    var N = String.fromCharCode(10);
+    if(_via === 'whatsapp'){
+      var txt = 'Oi, Isabela! Vim pelo seu portfólio.' + N + N + 'Nome: ' + g('fNome') + N + 'Assunto: ' + assunto + N + N + g('fMsg');
+      window.open('https://wa.me/' + CONTATO.whatsapp.replace(/\D/g,'') + '?text=' + encodeURIComponent(txt), '_blank');
+    } else {
+      var corpo = 'Nome: ' + g('fNome') + N + 'Email: ' + g('fEmail') + N + N + g('fMsg');
+      location.href = 'mailto:' + CONTATO.email + '?subject=' + encodeURIComponent(assunto) + '&body=' + encodeURIComponent(corpo);
+    }
   });
 }
 
